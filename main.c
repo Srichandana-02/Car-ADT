@@ -2,15 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 
-int st[10];
-char stn[10][30];
-int top=-1,tp=-1;
-struct custom{
-    char * name;
-    int mob;
-};
-char Q[10][30],Q1[10][30];
-int f=-1,r=-1,f1=-1,r1=-1,max=10;
 void displayCar(char uc[], char ucl[]);
 void dispfb();
 void del();
@@ -22,6 +13,16 @@ void order();
 void create();
 void place(char uc[],char ucl[]);
 void process();
+
+int st[10];
+char stn[10][30];
+int top=-1,tp=-1;
+struct custom{
+    char * name;
+    int mob;
+};
+char Q[10][30],Q1[10][30];
+int f=-1,r=-1,f1=-1,r1=-1,max=10;
 
 enum boolean{FALSE,TRUE};
 
@@ -179,7 +180,7 @@ void entry(){
     struct custom s1;
     printf("****Enter your details****\n");
     printf("Your good name\n");
-    scanf("%s",s1.name);
+    scanf("%s",&s1.name);
     printf("Phone number\n");
     scanf("%d",&s1.mob);
     printf("******************************************************\n");
@@ -296,3 +297,4 @@ int main(){
             printf("Invalid choice\n");
     }while(op!=6);
 }
+
